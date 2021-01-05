@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Resume - Start Bootstrap Theme</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet"
+        type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+</head>
+
+<body id="page-top">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">
+            <span class="d-block d-lg-none">Wordpress</span>
+            <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2"
+                    src="assets/img/logo-WordPress.jpg" alt="" /></span>
+        </a>
+        <button style="margin-right: 10px;" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#presentation">Présentation</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#etape1">Étape 1</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#etape2">Étape 2</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#etape3">Étape 3</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#etape4">Étape 4</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#etape5">Étape 5</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#etape6">Étape 6</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#etape7">Étape 7</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#etape8">Étape 8</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#etape9">Étape 9</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#etape10">Étape 10</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#etape11">Étape 11</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#etape12">Étape 12</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="https://montage203.github.io/tutoriels">Autres tutoriels</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Page Content-->
+    <div class="container-fluid p-0">
+        <!-- About-->
+        <section class="resume-section" id="presentation">
+            <div class="resume-section-content">
+                <h1 class="mb-0">
+                    Créer son thème
+                    <span class="text-primary">Wordpress</span>
+                </h1>
+                <div class="subheading mb-5">
+                    Tutoriel par Montage203 ·
+                    <a onclick="window.open(this.href); return false;" href="https://discord.com/invite/GCNMM8p">Discord</a>
+                </div>
+                <p class="lead mb-5">
+                    Ce tutoriel permet de créer son propre thème Wordpress.
+                </p>
+            </div>
+        </section>
+        <hr class="m-0" />
+        <!-- Experience-->
+        <section class="resume-section" id="etape1">
+            <div class="resume-section-content">
+                <h2 class="mb-5">
+                    <span class="text-primary">Étape 1:</span> Le minimum requis
+                </h2>
+                <p class="lead mb-5">
+                    Cette étape est obligatoire et permet d'avoir un premier résultat.
+                </p>
+                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="flex-grow-1">
+                        <h3 class="mb-0">Création des fichiers</h3>
+                        <div class="subheading mb-3">Il suffit de :</div>
+                        <li>
+                            créer un nouveau dossier dans <b>wp-contents/themes</b> par
+                            exemple <b>mon-theme</b>
+                        </li>
+                        <li>
+                            y créer un fichier <b>index.php</b>
+                            <ul style="margin-bottom: 0">
+                                <li>
+                                    Dans ce fichier écrire par exemple
+                                    <b>Coucou, je fonctionne !</b>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            y créer un fichier <b>style.css</b>
+                            <ul style="margin-bottom: 0">
+                                <li>
+                                    dans ce fichier copier le code suivant et modifier les
+                                    informations
+                                </li>
+                                <div style="background: #f5f2f0; padding: 1em; margin: 0.5em 0">
+                                    <code class="language-php"><span class="token comment">
+                          /* Theme Name: NOM DE VOTRE THEME<br />
+                          URI: http://www.VOTRE-SITE.COM<br />
+                        Description: DESCRIPTION DE VOTRE THEME.<br />
+                        Version: 1.0<br />
+                        Author: VOTRE NOM<br />
+                        */</span
+                      ></code>
+                                </div>
+                            </ul>
+                        </li>
+                        <li>
+                            y créer un fichier <b>screenshot.png</b> (dimensions 1200×900)
+                            illustrant le thème.
+                            <ul>
+                                <i>À noter que cette étape n'est pas obligatoire pour que le
+                                    thème fonctionne.</i>
+                            </ul>
+                        </li>
+                        <li>
+                            aller dans le backend <b>apparence > thèmes</b> et y activer le
+                            nouveau thème
+                        </li>
+                        <li>
+                            retourner sur l’URL publique du site et rafraichir la page
+                        </li>
+                        <li>La page affichera: <b>Coucou, je fonctionne !</b></li>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr class="m-0" />
+        <!-- Education-->
+        <section class="resume-section" id="etape2">
+            <div class="resume-section-content">
+                <h2 class="mb-5">
+                    <span class="text-primary">Étape 2:</span> Afficher des contenus
+                    dynamiques relatifs au site (nom, description, chemin vers le
+                    dossier du thème)
+                </h2>
+                <p class="lead mb-5">
+                    Maintenant que nous avons affiché le contenu de notre page
+                    <b>index.php</b> en activant le thème, passons en revue les quelques
+                    tags WP les plus utiles pour commencer, je pense notamment au:
+                </p>
+                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="flex-grow-1">
+                        <li>Titre du site</li>
+                        <li>Description / slogan du site</li>
+                        <li>
+                            chemin vers le répertoire du thème, afin de pouvoir lier notre
+                            feuille de style <b>style.css</b> à notre page <b>index.php</b>
+                            <ul style="margin-bottom: 0">
+                                <style>
+                                    .token.important,
+                                    .token.bold {
+                                        font-weight: bold;
+                                    }
+
+                                    .token.regex,
+                                    .token.important,
+                                    .token.variable {
+                                        color: #e90;
+                                    }
+
+                                    .token.function,
+                                    .token.class-name {
+                                        color: #dd4a68;
+                                    }
+
+                                    .token.selector,
+                                    .token.attr-name,
+                                    .token.string,
+                                    .token.char,
+                                    .token.builtin,
+                                    .token.inserted {
+                                        color: #690;
+                                    }
+
+                                    .token.comment,
+                                    .token.prolog,
+                                    .token.doctype,
+                                    .token.cdata {
+                                        color: slategray;
+                                    }
+                                </style>
+
+                                <div style="background: #f5f2f0; padding: 1em; margin: 0.5em 0">
+                                    <code><span class="token php language-php"
+                        ><span class="token delimiter important">&lt;?php</span>
+                        <span class="token function">bloginfo</span
+                        ><span class="token punctuation">(</span
+                        ><span class="token string single-quoted-string"
+                          >'stylesheet_directory'</span
+                        ><span class="token punctuation">)</span
+                        ><span class="token punctuation">;</span>
+                        <span class="token delimiter important"
+                          >?&gt;</span
+                        ></span
+                      >
+                      <span class="token comment"
+                        >&lt;!-- chemin vers le répertoire/thème du site du site
+                        --&gt;</span
+                      ><br />
+                      <span class="token php language-php"
+                        ><span class="token delimiter important">&lt;?php</span>
+                        <span class="token function">bloginfo</span
+                        ><span class="token punctuation">(</span
+                        ><span class="token string single-quoted-string"
+                          >'name'</span
+                        ><span class="token punctuation">)</span
+                        ><span class="token punctuation">;</span>
+                        <span class="token delimiter important"
+                          >?&gt;</span
+                        ></span
+                      >
+                      <span class="token comment"
+                        >&lt;!-- nom du site --&gt;</span
+                      ><br />
+                      <span class="token php language-php"
+                        ><span class="token delimiter important">&lt;?php</span>
+                        <span class="token function">bloginfo</span
+                        ><span class="token punctuation">(</span
+                        ><span class="token string single-quoted-string"
+                          >'description'</span
+                        ><span class="token punctuation">)</span
+                        ><span class="token punctuation">;</span>
+                        <span class="token delimiter important"
+                          >?&gt;</span
+                        ></span
+                      >
+                      <span class="token comment"
+                        >&lt;!-- description du site --&gt;</span
+                      ></code>
+                                </div>
+                            </ul>
+                        </li>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr class="m-0" />
+        <!-- Education-->
+        <section class="resume-section" id="etape3">
+            <div class="resume-section-content">
+                <h2 class="mb-5">
+                    <span class="text-primary">Étape 3:</span> Créer une boucle pour
+                    afficher tous les articles et leurs contenus
+                </h2>
+                <p class="lead mb-5">
+                    Nous allons maintenant créer une boucle qui permet d’afficher tous
+                    les articles / posts. Par défaut ils seront affichés par ordre
+                    antéchronologique (les plus récent en premier)
+                </p>
+                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="flex-grow-1">
+                        <style>
+                            .token.important,
+                            .token.bold {
+                                font-weight: bold;
+                            }
+
+                            .token.regex,
+                            .token.important,
+                            .token.variable {
+                                color: #e90;
+                            }
+
+                            .token.function,
+                            .token.class-name {
+                                color: #dd4a68;
+                            }
+
+                            .token.selector,
+                            .token.attr-name,
+                            .token.string,
+                            .token.char,
+                            .token.builtin,
+                            .token.inserted {
+                                color: #690;
+                            }
+
+                            .token.comment,
+                            .token.prolog,
+                            .token.doctype,
+                            .token.cdata {
+                                color: slategray;
+                            }
+                        </style>
+
+                        <div style="background: #f5f2f0; padding: 1em; margin: 0.5em 0">
+                            <code>
+                  <span class="token comment"
+                    >&lt;!-- Commencer la boucle --&gt;</span
+                  ><br />
+                  <span class="token php language-php"
+                    ><span class="token delimiter important">&lt;?php</span>
+                    <span class="token keyword">if</span>
+                    <span class="token punctuation">(</span
+                    ><span class="token function">have_posts</span
+                    ><span class="token punctuation">(</span
+                    ><span class="token punctuation">)</span
+                    ><span class="token punctuation">)</span>
+                    <span class="token punctuation">:</span>
+                    <span class="token keyword">while</span>
+                    <span class="token punctuation">(</span
+                    ><span class="token function">have_posts</span
+                    ><span class="token punctuation">(</span
+                    ><span class="token punctuation">)</span
+                    ><span class="token punctuation">)</span>
+                    <span class="token punctuation">:</span>
+                    <span class="token class-name return-type">the_post</span
+                    ><span class="token punctuation">(</span
+                    ><span class="token punctuation">)</span
+                    ><span class="token punctuation">;</span>
+                    <span class="token delimiter important">?&gt;</span></span
+                  ><br />
+                  <br />
+                  <span class="token comment"
+                    >&lt;!-- Afficher les contenus de la boucle --&gt;</span
+                  ><br />
+                  <span class="token php language-php"
+                    ><span class="token delimiter important">&lt;?php</span>
+                    <span class="token function">the_post_thumbnail</span
+                    ><span class="token punctuation">(</span
+                    ><span class="token punctuation">)</span
+                    ><span class="token punctuation">;</span>
+                    <span class="token delimiter important">?&gt;</span></span
+                  >
+                  <span class="token comment"
+                    >&lt;!-- remplace la balise &lt;img&gt; ! alternativement,
+                    on peut remplacer l'attribut src de la balise &lt;img&gt;
+                    par --&gt;</span
+                  >
+                  <span class="token php language-php"
+                    ><span class="token delimiter important">&lt;?php</span>
+                    <span class="token keyword">echo</span>
+                    <span class="token function"
+                      >get_the_post_thumbnail_url</span
+                    ><span class="token punctuation">(</span
+                    ><span class="token punctuation">)</span
+                    ><span class="token punctuation">;</span>
+                    <span class="token delimiter important">?&gt;</span></span
+                  ><br />
+                  <span class="token php language-php"
+                    ><span class="token delimiter important">&lt;?php</span>
+                    <span class="token function">the_title</span
+                    ><span class="token punctuation">(</span
+                    ><span class="token punctuation">)</span
+                    ><span class="token punctuation">;</span>
+                    <span class="token delimiter important">?&gt;</span></span
+                  >
+                  <span class="token comment">&lt;!-- titre du post --&gt;</span
+                  ><br />
+                  <span class="token php language-php"
+                    ><span class="token delimiter important">&lt;?php</span>
+                    <span class="token function">the_content</span
+                    ><span class="token punctuation">(</span
+                    ><span class="token punctuation">)</span
+                    ><span class="token punctuation">;</span>
+                    <span class="token delimiter important">?&gt;</span></span
+                  >
+                  <span class="token comment"
+                    >&lt;!-- contenu du post --&gt;</span
+                  ><br />
+                  <span class="token php language-php"
+                    ><span class="token delimiter important">&lt;?php</span>
+                    <span class="token function">the_date</span
+                    ><span class="token punctuation">(</span
+                    ><span class="token punctuation">)</span
+                    ><span class="token punctuation">;</span>
+                    <span class="token delimiter important">?&gt;</span></span
+                  >
+                  <span class="token comment">&lt;!-- date du post --&gt;</span
+                  ><br />
+                  <span class="token php language-php"
+                    ><span class="token delimiter important">&lt;?php</span>
+                    <span class="token function">the_permalink</span
+                    ><span class="token punctuation">(</span
+                    ><span class="token punctuation">)</span
+                    ><span class="token punctuation">;</span>
+                    <span class="token delimiter important">?&gt;</span></span
+                  >
+                  <span class="token comment"
+                    >&lt;!-- lien vers le détail du post --&gt;</span
+                  ><br />
+                  <span class="token php language-php"
+                    ><span class="token delimiter important">&lt;?php</span>
+                    <span class="token function">the_time</span
+                    ><span class="token punctuation">(</span
+                    ><span class="token punctuation">)</span
+                    ><span class="token punctuation">;</span>
+                    <span class="token delimiter important">?&gt;</span></span
+                  >
+                  <span class="token comment"
+                    >&lt;!-- date de création du post --&gt;</span
+                  ><br />
+                  <span class="token php language-php"
+                    ><span class="token delimiter important">&lt;?php</span>
+                    <span class="token function">the_author</span
+                    ><span class="token punctuation">(</span
+                    ><span class="token punctuation">)</span
+                    ><span class="token punctuation">;</span>
+                    <span class="token delimiter important">?&gt;</span></span
+                  >
+                  <span class="token comment"
+                    >&lt;!-- auteur du post --&gt;</span
+                  ><br />
+                  <span class="token php language-php"
+                    ><span class="token delimiter important">&lt;?php</span>
+                    <span class="token function">the_category</span
+                    ><span class="token punctuation">(</span
+                    ><span class="token punctuation">)</span
+                    ><span class="token punctuation">;</span
+                    ><span class="token delimiter important">?&gt;</span></span
+                  >
+                  <span class="token comment"
+                    >&lt;!-- la/les catégorie(s) assignée(s) au post
+                    --&gt;</span
+                  ><br />
+                  <br />
+                  <span class="token comment"
+                    >&lt;!-- Terminer la boucle --&gt;</span
+                  ><br />
+                  <span class="token php language-php"
+                    ><span class="token delimiter important">&lt;?php</span>
+                    <span class="token keyword">endwhile</span
+                    ><span class="token punctuation">;</span>
+                    <span class="token keyword">endif</span
+                    ><span class="token punctuation">;</span>
+                    <span class="token delimiter important">?&gt;</span></span
+                  >
+                </code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr class="m-0" />
+        <!-- Education-->
+        <section class="resume-section" id="etape4">
+            <div class="resume-section-content">
+                <h2 class="mb-5">
+                    <span class="text-primary">Étape 4:</span> Créer une boucle en dehors de la page des articles.
+                </h2>
+                <p class="lead mb-5">
+                    Cette boucle permet d’afficher tous les articles / posts en dehors de la page des articles.
+                </p>
+                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="flex-grow-1">
+                        <style>
+                            .token.important,
+                            .token.bold {
+                                font-weight: bold;
+                            }
+
+                            .token.regex,
+                            .token.important,
+                            .token.variable {
+                                color: #e90;
+                            }
+
+                            .token.function,
+                            .token.class-name {
+                                color: #dd4a68;
+                            }
+
+                            .token.selector,
+                            .token.attr-name,
+                            .token.string,
+                            .token.char,
+                            .token.builtin,
+                            .token.inserted {
+                                color: #690;
+                            }
+
+                            .token.comment,
+                            .token.prolog,
+                            .token.doctype,
+                            .token.cdata {
+                                color: slategray;
+                            }
+                        </style>
+
+
+                        <div style="background: #f5f2f0; padding: 1em; margin: 0.5em 0">
+                            <code>
+                  <span class="token comment">&lt;!-- Commencer la boucle --&gt;</span><br />
+                  <span class="token php language-php">
+                      <span class="token delimiter important">
+                          &lt;?php</span>
+                          <span class="token keyword">$args = array( 'numberposts' => 6, 'order'=> 'DESC', 'orderby' => 'date' );<br>
+                            $postslist = get_posts( $args );<br>
+                            foreach ($postslist as $post) :  setup_postdata($post);</span>
+                          <span class="token delimiter important">?&gt;</span></span><br />
+                          </span>
+                  <br />
+                  <span class="token comment"
+                    >&lt;!-- Afficher les contenus de la boucle --&gt;</span
+                  ><br />
+                  Voir étape 3<br>
+                  <br />
+                  <span class="token comment">&lt;!-- Terminer la boucle --&gt;</span><br />
+                  <span class="token php language-php"><span class="token delimiter important">&lt;?php</span>
+                    <span class="token keyword">endforeach;wp_reset_query();</span>
+                    <span class="token delimiter important">?&gt;</span></span>
+                </code>
+                        </div>
+
+                        <li>
+                            <b>numberposts</b> = le nombre de posts à afficher. (dans l'exemple il est sur 6)
+                        </li>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr class="m-0" />
+        <!-- Education-->
+        <section class="resume-section" id="etape5">
+            <div class="resume-section-content">
+                <h2 class="mb-5">
+                    <span class="text-primary">Étape 5:</span> Créer une boucle juste pour une catégorie
+                </h2>
+                <p class="lead mb-5">
+                    Cette boucle permet d’afficher tous les articles / posts d'une seule catégorie.
+                </p>
+                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="flex-grow-1">
+
+
+                        <div style="background: #f5f2f0; padding: 1em; margin: 0.5em 0">
+                            <code>
+                  <span class="token comment">&lt;!-- Commencer la boucle --&gt;</span><br />
+                  <span class="token php language-php">
+                      <span class="token delimiter important">
+                          &lt;?php</span>
+                          <span class="token keyword">$catquery = new WP_Query( 'cat=2' );</span>
+                          <span class="token delimiter important">?&gt;</span></span><br />
+                          <span class="token delimiter important">
+                            &lt;?php</span>
+                            <span class="token keyword">while($catquery->have_posts()) : $catquery->the_post();</span>
+                            <span class="token delimiter important">?&gt;</span></span><br>
+                  <br />
+                  <span class="token comment"
+                    >&lt;!-- Afficher les contenus de la boucle --&gt;</span
+                  ><br />
+                  Voir Étape 3<br>
+                  <br />
+                  <span class="token comment">&lt;!-- Terminer la boucle --&gt;</span><br />
+                  <span class="token php language-php"><span class="token delimiter important">&lt;?php</span>
+                    <span class="token keyword">endwhile;</span>
+                    <span class="token delimiter important">?&gt;</span></span>
+                </code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr class="m-0" />
+        <!-- Education-->
+        <section class="resume-section" id="etape6">
+            <div class="resume-section-content">
+                <h2 class="mb-5">
+                    <span class="text-primary">Étape 6:</span> Filtrer les boucles
+                </h2>
+                <p class="lead mb-5">
+                    On peut aussi filtrer les boucles pour n’afficher que ce qui nous intéresse.
+                </p>
+                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="flex-grow-1">
+
+
+                        <div style="background: #f5f2f0; padding: 1em; margin: 0.5em 0">
+                            <code>
+                               <span class="token comment">&lt;!-- n'afficher que les contenus de type 'post' (dans une page p.ex. --&gt;</span><br>
+                                    <span class="token php language-php"><span class="token delimiter important">&lt;?php</span> <span class="token function">query_posts</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'post_type=post'</span><span class="token punctuation">)</span> <span class="token delimiter important">?&gt;</span></span><br>
+                                    <br>
+                                    <span class="token comment">&lt;!-- n'afficher que le premier post. On n'affiche qu'un post --&gt;</span><br>
+                                    <span class="token php language-php"><span class="token delimiter important">&lt;?php</span> <span class="token function">query_posts</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'posts_per_page=1'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token delimiter important">?&gt;</span></span><br>
+                                    <br>
+                                    <span class="token comment">&lt;!-- Afficher uniquement le 2e, 3e et 4e post. On skip le premier et on en affiche 3 au total--&gt;</span><br>
+                                    <span class="token php language-php"><span class="token delimiter important">&lt;?php</span> <span class="token function">query_posts</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'offset=1&amp;posts_per_page=3'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token delimiter important">?&gt;</span></span><br>
+                                    <br>
+                                    <span class="token comment">&lt;!-- afficher tout excepté le premier post. --&gt;</span><br>
+                                    <span class="token php language-php"><span class="token delimiter important">&lt;?php</span> <span class="token function">query_posts</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'offset=1'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token delimiter important">?&gt;</span></span><br>
+                                    <br>
+                                    <span class="token comment">&lt;!-- afficher tout excepté les 4 premiers  posts. --&gt;</span><br>
+                                    <span class="token php language-php"><span class="token delimiter important">&lt;?php</span> <span class="token function">query_posts</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'offset=4'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token delimiter important">?&gt;</span></span><br>
+                </code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr class="m-0" />
+        <!-- Education-->
+        <section class="resume-section" id="etape7">
+            <div class="resume-section-content">
+                <h2 class="mb-5">
+                    <span class="text-primary">Étape 7:</span> Activer la possibilité d’ajouter une image mise en avant
+                </h2>
+                <p class="lead mb-5">
+                    Dans <b>functions.php</b>, ajouter le code suivant
+                </p>
+                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="flex-grow-1">
+
+
+                        <div style="background: #f5f2f0; padding: 1em; margin: 0.5em 0">
+                            <code>
+                                        <span class="token comment">//activer image mise en avant</span><br>
+                                        <span class="token function">add_theme_support</span><span class="token punctuation">(</span> <span class="token string single-quoted-string">'post-thumbnails'</span> <span class="token punctuation">)</span><span class="token punctuation">;</span><br>
+                        </code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr class="m-0" />
+        <!-- Education-->
+        <section class="resume-section" id="etape8">
+            <div class="resume-section-content">
+                <h2 class="mb-5">
+                    <span class="text-primary">Étape 8:</span> Afficher le menu
+                </h2>
+                <p class="lead mb-5">
+                    Vous verrez que par défaut il ne vous est pas possible d’ajouter un menu. Il faut le spécifier à
+                    WordPress. Dans le fichier <b>functions.php</b>, ajouter le code suivant
+                </p>
+                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="flex-grow-1">
+
+
+                        <div style="background: #f5f2f0; padding: 1em; margin: 0.5em 0">
+                            <code>
+                                                        <span class="token comment">// ajouter une zone de menu</span><br>
+<span class="token function">register_nav_menu</span><span class="token punctuation">(</span> <span class="token string single-quoted-string">'primary'</span><span class="token punctuation">,</span> <span class="token function">__</span><span class="token punctuation">(</span> <span class="token string single-quoted-string">'Navigation Menu'</span> <span class="token punctuation">)</span> <span class="token punctuation">)</span><span class="token punctuation">;</span><br>
+                                        </code>
+                        </div>
+                    </div>
+                </div>
+                <p class="lead mb-5">
+                    Ensuite dans votre thème, vous pouvez appeler votre menu de cette façon
+                </p>
+                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="flex-grow-1">
+
+
+                        <div style="background: #f5f2f0; padding: 1em; margin: 0.5em 0">
+                            <code>
+                                                        <span class="token php language-php"><span class="token delimiter important">&lt;?php</span> <span class="token function">wp_nav_menu</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token delimiter important">?&gt;</span></span>
+                                        </code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr class="m-0" />
+        <!-- Education-->
+        <section class="resume-section" id="etape9">
+            <div class="resume-section-content">
+                <h2 class="mb-5">
+                    <span class="text-primary">Étape 9:</span> Personaliser le lien Lire la suite…
+                </h2>
+                <p class="lead mb-5">
+                    Dans <b>functions.php</b>, ajouter le code suivant
+                </p>
+                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="flex-grow-1">
+
+
+                        <div style="background: #f5f2f0; padding: 1em; margin: 0.5em 0">
+                            <code>
+
+                                <span class="token comment">//personaliser "lire la suite" </span><br>
+<br>
+                                <span class="token keyword">function</span> <span class="token function">modify_read_more_link</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><br>
+                                <span class="token keyword">return</span> <span class="token string single-quoted-string">'&lt;a class="more-link" href="'</span> <span class="token operator">.</span> <span class="token function">get_permalink</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">.</span> <span class="token string single-quoted-string">'"&gt;lire la suite...&lt;/a&gt;'</span><span class="token punctuation">;</span>
+                                <span class="token punctuation">}</span><br>
+                                 <br>
+                                <span class="token function">add_filter</span><span class="token punctuation">(</span> <span class="token string single-quoted-string">'the_content_more_link'</span><span class="token punctuation">,</span> <span class="token string single-quoted-string">'modify_read_more_link'</span> <span class="token punctuation">)</span><span class="token punctuation">;</span><br>
+
+                            </code>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        <hr class="m-0" />
+        <!-- Education-->
+        <section class="resume-section" id="etape10">
+            <div class="resume-section-content">
+                <h2 class="mb-5">
+                    <span class="text-primary">Étape 10:</span> Ajouter une zone de widgets
+                </h2>
+                <p class="lead mb-5">
+                    Dans <b>functions.php</b>, ajouter le code suivant
+                </p>
+                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="flex-grow-1">
+
+
+                        <div style="background: #f5f2f0; padding: 1em; margin: 0.5em 0">
+                            <code>
+
+                                <span class="token comment">// Enregistrer une zone appelée 'Ma zone de widgets'</span><br>
+                                function add_widget_Support() {<br>
+                                    register_sidebar( array(<br>
+                                        'name'          =&gt; 'Ma zone de widgets',<br>
+                                        'id'            =&gt; 'zone-widgets',<br>
+                                        'before_widget' =&gt; '<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>',<br>
+                    'after_widget'  =&gt; '<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>',<br>
+                    'before_title'  =&gt; '<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">&gt;</span></span>',<br>
+                    'after_title'   =&gt; '<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">&gt;</span></span>',<br>
+    ) );<br>
+}<br>
+<span class="token comment">// Hook the widget initiation and run our function</span><br>
+add_action( 'widgets_init', 'add_Widget_Support' );
+                                
+                            </code>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="lead mb-5">
+                    Ensuite dans votre thème, vous pouvez appeler votre widget de cette façon
+                </p>
+                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="flex-grow-1">
+
+
+                        <div style="background: #f5f2f0; padding: 1em; margin: 0.5em 0">
+                            <code>
+                                <span class="token php language-php"><span class="token delimiter important">&lt;?php</span> <span class="token function">dynamic_sidebar</span><span class="token punctuation">(</span> <span class="token string single-quoted-string">'zone-widgets'</span> <span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token delimiter important">?&gt;</span></span>
+                                        </code>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        <hr class="m-0" />
+        <!-- Education-->
+        <section class="resume-section" id="etape11">
+            <div class="resume-section-content">
+                <h2 class="mb-5">
+                    <span class="text-primary">Étape 11:</span> Ajouter des classes sur le body
+                </h2>
+                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="flex-grow-1">
+
+
+                        <div style="background: #f5f2f0; padding: 1em; margin: 0.5em 0">
+                            <code>
+
+                                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span> <span class="token attr-name"><span class="token php language-php"><span class="token delimiter important">&lt;?php</span> <span class="token function">body_class</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token delimiter important">?&gt;</span></span></span><span class="token punctuation">&gt;</span></span>
+                                
+                            </code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr class="m-0" />
+        <!-- Education-->
+        <section class="resume-section" id="etape12">
+            <div class="resume-section-content">
+                <h2 class="mb-5">
+                    <span class="text-primary">Étape 12:</span> Ajouter wp_header() et wp_footer()
+                </h2>
+                <p class="lead mb-5">
+                    Pour terminer, il faut encore ajouter une fonction qui permettent à WordPress d'aller chercher la page <b>header.php</b> et l'injecté dans la page<br>
+                    Avec cette méthode, vous pouvez avoir qu'un seul fichier qui comporte le menu. Et donc, si vous y faites une modificationd dessus, la modification se fera sur toutes vos pages.
+                </p>
+                <p class="lead mb-5">
+                    Pour appeler <b>header.php</b>, ajouter le code suivant
+                </p>
+                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="flex-grow-1">
+
+
+                        <div style="background: #f5f2f0; padding: 1em; margin: 0.5em 0">
+                            <code>
+                                <span class="token php language-php"><span class="token delimiter important">&lt;?php</span> <span class="token function">wp_header</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token delimiter important">?&gt;</span></span>
+                            </code>
+                        </div>
+                        </div>
+                </div>
+                <p class="lead mb-5">
+                    Pour appeler <b>footer.php</b>, ajouter le code suivant
+                </p>
+                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="flex-grow-1">
+
+
+                        <div style="background: #f5f2f0; padding: 1em; margin: 0.5em 0">
+                            <code>
+                                <span class="token php language-php"><span class="token delimiter important">&lt;?php</span> <span class="token function">wp_footer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token delimiter important">?&gt;</span></span>
+                            </code>
+                        </div>
+                        </div>
+                </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr class="m-0" />
+        <!-- Interests-->
+        <section class="resume-section" id="etape13">
+            <div class="resume-section-content">
+                <h2 class="mb-5"><a class="nav-link js-scroll-trigger" href="https://montage203.github.io/tutoriels">Autres tutoriels</a></h2>
+
+            </div>
+        </section>
+
+    </div>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Third party plugin JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>

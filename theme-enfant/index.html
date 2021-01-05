@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Wordpress - Thème enfant</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet"
+        type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+</head>
+
+<body id="page-top">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">
+            <span class="d-block d-lg-none">Wordpress</span>
+            <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2"
+                    src="assets/img/logo-WordPress.jpg" alt="" /></span>
+        </a>
+        <button style="margin-right: 10px;" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#presentation">Présentation</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#etape1">Étape 1</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#etape2">Étape 2</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#etape3">Étape 3</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#etape4">Étape 4</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#etape5">Étape 5</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#etape6">Étape 6</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="https://montage203.github.io/tutoriels">Autres tutoriels</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Page Content-->
+    <div class="container-fluid p-0">
+        <!-- About-->
+        <section class="resume-section" id="presentation">
+            <div class="resume-section-content">
+                <h1 class="mb-0">
+                    Créer son thème enfant
+                    <span class="text-primary">Wordpress</span>
+                </h1>
+                <div class="subheading mb-5">
+                    Tutoriel par Montage203 ·
+                    <a onclick="window.open(this.href); return false;"href="https://discord.com/invite/GCNMM8p">Discord</a>
+                </div>
+                <p class="lead mb-5">
+                    Ce tutoriel permet de créer son propre thème enfant Wordpress.
+                </p>
+                <p class="lead mb-5">
+                    Lorsque vous installez un thème sur votre site WordPress, il se peut que vous apportiez des
+                    modifications dans le fichier CSS ou dans les fichiers PHP du site. Le problème est que lorsque ce
+                    thème sera mis à jour par ses créateurs et que vous décidez de mettre ce thème à jour sur votre
+                    site, toutes les modifications seront perdues.
+                </p>
+                <p class="lead mb-5">
+                    Il existe heureusement une alternative à cela, les thèmes enfant.
+                </p>
+                <p class="lead mb-5">
+                    Il s’agit d’un thème que vous allez créer qui reprend l’ensemble des propriétés d’un thème existant
+                    dans lequel vous pourrez apporter toutes les modifications que vous voulez et qui ne seront jamais
+                    écrasées lorsque le thème principal (que l’on qualifie de thème parent) sera mis à jour.
+                </p>
+                <p class="lead mb-5">
+                    Pour faire un thème enfant, vous aurez besoin du thème original et de 2 fichiers que vous allez
+                    créer pas à pas grâce à ce tutoriel.
+                </p>
+            </div>
+        </section>
+        <hr class="m-0" />
+        <!-- Experience-->
+        <style>
+            .imageillu {
+                box-shadow: 8px 8px 0px #aaa;
+            }
+        </style>
+        <section class="resume-section" id="etape1">
+            <div class="resume-section-content">
+                <h2 class="mb-5">
+                    <span class="text-primary">Étape 1:</span> Activer un thème
+                </h2>
+                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="flex-grow-1">
+                        <div class="subheading mb-3">Il suffit de :</div>
+                        <li>
+                            se rendre sur le backend du site et d'aller dans <b>Apparence/Thèmes</b>.<br>
+                            <br>
+                            <ul><img class="imageillu" src="assets/img/apparence-theme.png"></ul>
+                            <br>
+                        </li>
+                        <li>
+                            Pour l'exemple, je vais activer <b>Twenty Twenty</b> <i>(Je clique sur "Activer")</i>
+                            <ul style="margin-bottom: 0">
+                                <li><img class="imageillu" src="assets/img/apparence-theme2.png"></li>
+                            </ul>
+                        </li>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr class="m-0" />
+        <!-- Education-->
+        <section class="resume-section" id="etape2">
+            <div class="resume-section-content">
+                <h2 class="mb-5">
+                    <span class="text-primary">Étape 2:</span> Création d'un nouveau répertoire
+                </h2>
+                <p class="lead mb-5">
+                    Maintenant que nous avons activer notre thème
+                    <b>Twenty Twenty</b>, nous allons créé le dossier qui comprendra notre thème enfant.
+                </p>
+                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="flex-grow-1">
+                        <li>Pour commencer, rendons-nous dans les dossiers de configuration
+                            <ul style="margin-bottom: 0">
+                                <li>Dans le dossier <b>wp-content/themes</b>, on identifie le nom du thème actif, dans
+                                    notre cas <b>twentytwenty</b><br>
+                                    <img class="imageillu" src="assets/img/apparence-theme3.png">
+                                </li>
+                            </ul>
+                        </li><br>
+                        <li>Dans le même dossier <b>wp-content/themes</b>, créer un nouveau dossier. Par exemple
+                            <b>child-twentytwenty</b> (par convention on peut reprendre le nom du dossier du thème
+                            principal précédé de <b>child-</b> mais le nom du dossier est libre)
+                        </li>
+                        <li>
+                            Dans le nouveau dossier (dans ce cas <b>child-twentytwenty</b>) créer 2 fichiers
+                            <ol style="margin-bottom: 0">
+                                <li><b>functions.php</b></li>
+                                <li><b>style.css</b></li>
+                            </ol>
+                        </li>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr class="m-0" />
+        <!-- Education-->
+        <section class="resume-section" id="etape3">
+            <div class="resume-section-content">
+                <h2 class="mb-5">
+                    <span class="text-primary">Étape 3:</span> Fichier functions.php
+                </h2>
+                <p class="lead mb-5">
+                    Dans le fichier <b>functions.php</b> copiez le code ci-dessous. Cela a pour effect de récupérer le
+                    style du thème parent <br>
+                    <i>N’oubliez pas d’inclure ce code dans des balises PHP <b>&lt;?php</b> code ici <b>?&gt;</b></i>
+                </p>
+                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="flex-grow-1">
+                        <style>
+                            .plain,
+                            .plain a {
+                                color: black !important;
+                            }
+
+                            .string,
+                            .string a {
+                                color: #ec602d !important;
+                            }
+
+                            .keyword {
+                                color: #00a0a0 !important;
+                            }
+                        </style>
+
+                        <div style="background: #f5f2f0; padding: 1em; margin: 0.5em 0">
+                            <code>
+
+                                <div class="lines">
+                                    <div class="line alt1">
+                                        <table>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="content">
+                                                        <code class="plain">add_action( </code>
+                            <code class="string">'wp_enqueue_scripts'</code>
+                            <code class="plain">, </code>
+                            <code class="string">'my_theme_enqueue_styles'</code>
+                            <code class="plain">);</code>
+                            </td>
+                            </tr>
+                            </tbody>
+                            </table>
+                        </div>
+                        <div class="line alt2">
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td class="content">
+                                            <code class="keyword">function</code>
+                                            <code class="plain">my_theme_enqueue_styles() {</code>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="line alt1">
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td class="content"><code class="plain">wp_enqueue_style( </code>
+                                            <code class="string">'parent-style'</code>
+                                            <code class="plain">, get_template_directory_uri() . </code>
+                                            <code class="string">'/style.css'</code> <code class="plain">);</code>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="line alt1">
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td class="content"><code class="plain">}</code></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    </code>
+                </div>
+            </div>
+    </div>
+    </div>
+    </section>
+    <hr class="m-0" />
+    <!-- Education-->
+    <section class="resume-section" id="etape4">
+        <div class="resume-section-content">
+            <h2 class="mb-5">
+                <span class="text-primary">Étape 4:</span> fichier style.css
+            </h2>
+            <p class="lead mb-5">
+                Dans le fichier <b>style.css</b>, copiez le code ci-dessous
+            </p>
+            <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                <div class="flex-grow-1">
+
+                    <style>
+                        .comments {
+    color: gray !important;}
+    .alt12 {
+    background-color: #435A5F !important;
+}
+.comments2 {color: white!important;}
+                    </style>
+
+
+                    <div style="background: #f5f2f0; padding: 1em; margin: 0.5em 0">
+                        <code>
+                            <div class="lines"><div class="line alt1"><table><tbody><tr><td class="content"><code class="comments">/*</code>
+                        </td>
+                        </tr>
+                        </tbody>
+                        </table>
+                    </div>
+                    <div class="line alt2">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td class="content"><code
+                                            class="comments">Theme Name: Mon site enfant de Twenty Twenty</code></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="line alt1 alt12 highlighted">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td class="content"><code class="comments comments2">Template: twentytwenty</code></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="line alt2">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td class="content"><code class="comments">Author: Montage203</code></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="line alt1">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td class="content"><code
+                                            class="comments">Description: Thème enfant crée sur base du thème Twenty Twenty</code>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="line alt2">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td class="content"><code class="comments">Version: 1.0.0</code></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="line alt1">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td class="content"><code class="comments">*/</code></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                </code>
+            </div>
+
+            <li>
+                Le plus important ici est la valeur attribuée à Template. Il doit impérativement s’agir du <b>nom du dossier du thème parent</b> !
+            </li>
+
+        </div>
+        </div>
+        </div>
+    </section>
+    <hr class="m-0" />
+    <!-- Education-->
+    <section class="resume-section" id="etape5">
+        <div class="resume-section-content">
+            <h2 class="mb-5">
+                <span class="text-primary">Étape 5:</span> Activer votre thème enfant
+            </h2>
+            <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                <div class="flex-grow-1">
+                    <div class="subheading mb-3">Il suffit de :</div>
+                    <li>
+                        Comme pour l'étape 1, il faut se rendre sur le backend du site et aller dans <b>Apparence/Thèmes</b>.<br>
+                        <br>
+                        <ul><img class="imageillu" src="assets/img/apparence-theme.png"></ul>
+                        <br>
+                    </li>
+                    <li>
+                        Et ensuite, vous activer votre thème. <i>(si il n'est pas dans la liste, actualise la page)</i>
+                    </li><br>
+                    <li>Vous pouvez maintenant apporter toutes les modifications que vous désirez dans le fichier <b>style.css</b> de votre dossier enfant.<br>
+                        Et donc, si vous mettez à jour le thème parent, vous ne perdrez pas vos modifications.</li>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr class="m-0" />
+        <!-- Education-->
+        <section class="resume-section" id="etape6">
+            <div class="resume-section-content">
+                <h2 class="mb-5">
+                    <span class="text-primary">Étape 6:</span> A noter
+                </h2>
+                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="flex-grow-1">
+                        <li>
+                            toutes les modifications que vous apporterez dans le <b>style.css</b> de votre thème enfant viendront s’ajouter au style principal tu thème parent.<br>
+                        </li><br>
+                        <li>
+                            En revanche, si vous désirez changer des éléments dans les fichiers PHP, vous devrez d’abord copier le fichier PHP que vous voulez éditer depuis le thème parent dans votre thème enfant avant d’y apporter des modifications. Car contrairement au style.css du thème enfant qui s’<b>ajoute</b> au style.css parent, les fichiers PHP <b>remplacent</b> les fichiers PHP du thème parent !
+                        </li>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr class="m-0" />
+    <!-- Interests-->
+    <section class="resume-section" id="etape13">
+        <div class="resume-section-content">
+            <h2 class="mb-5"><a class="nav-link js-scroll-trigger" href="https://montage203.github.io/tutoriels">Autres tutoriels</a></h2>
+
+        </div>
+    </section>
+
+    </div>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Third party plugin JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>
