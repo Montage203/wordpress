@@ -10176,3 +10176,14 @@ section.resume-section .resume-section-content {
     left:0;
     opacity: 0.8;
 }
+img
+{
+  cursor: zoom-in;
+}
+.no-fullscreen
+{
+  cursor: Default;
+}
+.img-profile {
+  cursor: pointer;
+}
