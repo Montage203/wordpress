@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Wordpress - Interface backend</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet"
+        type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+</head>
+
+<body id="page-top">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">
+            <span class="d-block d-lg-none">Wordpress - Interface backend</span>
+            <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2"
+                    src="assets/img/logo-WordPress.jpg" alt="" /></span>
+        </a>
+        <button style="margin-right: 10px;" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#presentation">Présentation</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#etape1">Étape 1</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#etape2">Étape 2</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#etape3">Étape 3</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#etape4">Étape 4</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#etape5">Étape 5</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#etape6">Étape 6</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="https://montage203.github.io/Tutoriels">Autres tutoriels</a>
+                </li>
+            </ul>
+            
+        </div>
+        <div class="sb-sidenav-footer" style="background-color: rgba(255, 255, 255, 0.2)!important;
+        width: 100%;
+        padding: 0.75rem;
+        color: white;">
+            <div class="small">Sur une idée de :</div>
+            Niko/Montage203
+        </div>
+    </nav>
+    <!-- Page Content-->
+    <div class="container-fluid p-0">
+        <!-- About-->
+        <section class="resume-section" id="presentation">
+            <div class="resume-section-content">
+                <h1 class="mb-0">
+                    Créer son interface backend
+                    <span class="text-primary">Wordpress</span> en fonction des rôles d'utilisateurs
+                </h1>
+                <div class="subheading mb-5">
+                    Tutoriel par Montage203 ·
+                    <a onclick="window.open(this.href); return false;" href="https://discord.com/invite/GCNMM8p">Discord</a>
+                </div>
+                <p class="lead mb-5">
+                    Ce tutoriel permet de créer sa propre interface backend Wordpress en fonction des rôles d'utilisateurs.
+                </p>
+            </div>
+        </section>
+        <hr class="m-0" />
+        <!-- Experience-->
+        <section class="resume-section" id="etape1">
+            <div class="resume-section-content">
+                <h2 class="mb-5">
+                    <span class="text-primary">Étape 1:</span> Ajouter des éléments dans le menu
+                </h2>
+
+                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="flex-grow-1">
+
+
+                            <ul style="margin-bottom: 0">
+
+                                <div style="background: #f5f2f0; padding: 1em; margin: 0.5em 0">
+                                    <code class="language-php"><span class="token comment">// add pages to admin menu</span><br />
+                                        <span class="token comment">//https://stackoverflow.com/questions/39978561/how-to-add-custom-link-on-wordpress-admin-sidebar</span><br />
+                                        <span class="token function">add_action</span><span class="token punctuation">(</span> <span class="token string single-quoted-string">'admin_menu'</span><span class="token punctuation">,</span> <span class="token string single-quoted-string">'linked_url'</span> <span class="token punctuation">)</span><span class="token punctuation">;</span><br />
+                                        <span class="token keyword">function</span> <span class="token function">linked_url</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><br />
+                                        <span class="token function">add_menu_page</span><span class="token punctuation">(</span> <span class="token string single-quoted-string">'linked_url'</span><span class="token punctuation">,</span> <span class="token string single-quoted-string">'FAQ'</span><span class="token punctuation">,</span> <span class="token string single-quoted-string">'read'</span><span class="token punctuation">,</span> <span class="token string single-quoted-string">'/post.php?post=29&amp;action=edit'</span><span class="token punctuation">,</span> <span class="token string single-quoted-string">''</span><span class="token punctuation">,</span> <span class="token string single-quoted-string">'dashicons-text'</span><span class="token punctuation">,</span> <span class="token number">50</span> <span class="token punctuation">)</span><span class="token punctuation">;</span><br />
+                                        <span class="token function">add_menu_page</span><span class="token punctuation">(</span> <span class="token string single-quoted-string">'linked_url'</span><span class="token punctuation">,</span> <span class="token string single-quoted-string">'Liens utiles'</span><span class="token punctuation">,</span> <span class="token string single-quoted-string">'read'</span><span class="token punctuation">,</span> <span class="token string single-quoted-string">'/post.php?post=49&amp;action=edit'</span><span class="token punctuation">,</span> <span class="token string single-quoted-string">''</span><span class="token punctuation">,</span> <span class="token string single-quoted-string">'dashicons-admin-links'</span><span class="token punctuation">,</span> <span class="token number">55</span> <span class="token punctuation">)</span><span class="token punctuation">;</span><br />
+                                        <span class="token comment">// on va ajouter le lien vers la page d'accueil uniquement pour éditeur plus bas</span><br />
+                                        <span class="token punctuation">}</span><br />
+                                        <br />
+                                        <span class="token comment">// si lien externe dans admin menu</span><br />
+                                        <span class="token comment">// add_action( 'admin_menu' , 'linkedurl_function' );</span><br />
+                                        <span class="token comment">// function linkedurl_function() {</span><br />
+                                        <span class="token comment">// global $menu;</span><br />
+                                        <span class="token comment">// $menu[1][2] = "http://www.example.com";</span><br />
+                                        <span class="token comment">// }</span><br /></code>
+                                </div>
+                            </ul>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr class="m-0" />
+        <!-- Education-->
+        <section class="resume-section" id="etape2">
+            <div class="resume-section-content">
+                <h2 class="mb-5">
+                    <span class="text-primary">Étape 2:</span> Ajouter un séparateur dans le menu
+                </h2>
+                        
+                            <ul style="margin-bottom: 0">
+                                <style>
+                                    .token.function, .token.class-name {
+    color: #DD4A68;
+}
+.token.selector, .token.attr-name, .token.string, .token.char, .token.builtin, .token.inserted {
+    color: #690;
+}
+.token.atrule, .token.attr-value, .token.keyword {
+    color: #07a;
+}
+.token.property, .token.tag, .token.boolean, .token.number, .token.constant, .token.symbol, .token.deleted {
+    color: #905;
+}
+.token.comment, .token.prolog, .token.doctype, .token.cdata {
+    color: slategray;
+}
+code {
+    color: slategray;;}
+.token.regex, .token.important, .token.variable {
+    color: #e90;
+}
+                                </style>
+
+                                <div style="background: #f5f2f0; padding: 1em; margin: 0.5em 0">
+                                    <code><span class="token function">add_action</span><span class="token punctuation">(</span> <span class="token string single-quoted-string">'admin_menu'</span><span class="token punctuation">,</span> <span class="token string single-quoted-string">'add_admin_menu_separator'</span> <span class="token punctuation">)</span><span class="token punctuation">;</span><br />
+                                        <span class="token keyword">function</span> <span class="token function">add_admin_menu_separator</span><span class="token punctuation">(</span><span class="token punctuation">)</span><br />
+                                        <span class="token punctuation">{</span><br />
+                                        <span class="token function">add_menu_page</span><span class="token punctuation">(</span> <span class="token string single-quoted-string">''</span><span class="token punctuation">,</span> <span class="token string single-quoted-string">''</span><span class="token punctuation">,</span> <span class="token string single-quoted-string">'read'</span><span class="token punctuation">,</span> <span class="token string single-quoted-string">'wp-menu-separator'</span><span class="token punctuation">,</span> <span class="token string single-quoted-string">''</span><span class="token punctuation">,</span> <span class="token string single-quoted-string">''</span><span class="token punctuation">,</span> <span class="token string single-quoted-string">'21'</span> <span class="token punctuation">)</span><span class="token punctuation">;</span><br />
+                                        <span class="token function">add_menu_page</span><span class="token punctuation">(</span> <span class="token string single-quoted-string">''</span><span class="token punctuation">,</span> <span class="token string single-quoted-string">''</span><span class="token punctuation">,</span> <span class="token string single-quoted-string">'read'</span><span class="token punctuation">,</span> <span class="token string single-quoted-string">'wp-menu-separator'</span><span class="token punctuation">,</span> <span class="token string single-quoted-string">''</span><span class="token punctuation">,</span> <span class="token string single-quoted-string">''</span><span class="token punctuation">,</span> <span class="token string single-quoted-string">'56'</span> <span class="token punctuation">)</span><span class="token punctuation">;</span><br />
+                                        <span class="token comment">// add_submenu_page( 'edit.php?post_type=page', 'wp-menu-separator', '', 'read', '11', '' );</span><br />
+                                        <span class="token punctuation">}</span><br />
+                                        <br />
+                                        <span class="token comment">// add_action('admin_init','dump_admin_menu');</span><br />
+                                        <span class="token comment">// function dump_admin_menu() {</span><br />
+                                        <span class="token comment">// if (is_admin()) {</span><br />
+                                        <span class="token comment">// header('Content-Type:text/plain');</span><br />
+                                        <span class="token comment">// var_dump($GLOBALS['menu']);</span><br />
+                                        <span class="token comment">// exit;</span><br />
+                                        <span class="token comment">// }</span><br />
+                                        <span class="token comment">// }</span><br /></code>
+                                </div>
+                            </ul>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr class="m-0" />
+        <!-- Education-->
+        <section class="resume-section" id="etape3">
+            <div class="resume-section-content">
+                <h2 class="mb-5">
+                    <span class="text-primary">Étape 3:</span> Enlever les commentaires partout
+                </h2>
+                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="flex-grow-1">
+
+                        <div style="background: #f5f2f0; padding: 1em; margin: 0.5em 0">
+                            <code>
+                                <span class="token comment">/* COMMENTS // https://www.powderkegwebdesign.com/quickly-easily-remove-comments-backend-wordpress/<br />
+                                    * Remove comments in its entirety<br />
+                                    */</span><br />
+                                    <br />
+                                    <span class="token comment">// Removes from admin menu</span><br />
+                                    <span class="token function">add_action</span><span class="token punctuation">(</span> <span class="token string single-quoted-string">'admin_menu'</span><span class="token punctuation">,</span> <span class="token string single-quoted-string">'pk_remove_admin_menus'</span> <span class="token punctuation">)</span><span class="token punctuation">;</span><br />
+                                    <span class="token keyword">function</span> <span class="token function">pk_remove_admin_menus</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><br />
+                                        <span class="token function">remove_menu_page</span><span class="token punctuation">(</span> <span class="token string single-quoted-string">'edit-comments.php'</span> <span class="token punctuation">)</span><span class="token punctuation">;</span><br />
+                                    <span class="token punctuation">}</span><br />
+                                    <br />
+                                    <span class="token comment">// Removes from post and pages</span><br />
+                                    <span class="token function">add_action</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'init'</span><span class="token punctuation">,</span> <span class="token string single-quoted-string">'pk_remove_comment_support'</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br />
+                                    <span class="token keyword">function</span> <span class="token function">pk_remove_comment_support</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><br />
+                                    <span class="token function">remove_post_type_support</span><span class="token punctuation">(</span> <span class="token string single-quoted-string">'post'</span><span class="token punctuation">,</span> <span class="token string single-quoted-string">'comments'</span> <span class="token punctuation">)</span><span class="token punctuation">;</span><br />
+                                    <span class="token function">remove_post_type_support</span><span class="token punctuation">(</span> <span class="token string single-quoted-string">'page'</span><span class="token punctuation">,</span> <span class="token string single-quoted-string">'comments'</span> <span class="token punctuation">)</span><span class="token punctuation">;</span><br />
+                                    <span class="token punctuation">}</span><br />
+                                    <br />
+                                    <span class="token comment">// Removes from admin bar</span><br />
+                                    <span class="token function">add_action</span><span class="token punctuation">(</span> <span class="token string single-quoted-string">'wp_before_admin_bar_render'</span><span class="token punctuation">,</span> <span class="token string single-quoted-string">'pk_remove_comments_admin_bar'</span> <span class="token punctuation">)</span><span class="token punctuation">;</span><br />
+                                    <span class="token keyword">function</span> <span class="token function">pk_remove_comments_admin_bar</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><br />
+                                    <span class="token keyword">global</span> <span class="token variable">$wp_admin_bar</span><span class="token punctuation">;</span><br />
+                                    <span class="token variable">$wp_admin_bar</span><span class="token operator">-&gt;</span><span class="token function">remove_menu</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'comments'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br />
+                                  <span class="token punctuation">}</span><br /></code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr class="m-0" />
+        <!-- Education-->
+        <section class="resume-section" id="etape4">
+            <div class="resume-section-content">
+                <h2 class="mb-5">
+                    <span class="text-primary">Étape 4:</span> Enlever des éléments du menu
+                </h2>
+                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="flex-grow-1">
+
+
+
+                        <div style="background: #f5f2f0; padding: 1em; margin: 0.5em 0">
+                            <code>
+                                <span class="token comment">// remove elements from editor menu</span><br />
+                                <br />
+                                <span class="token keyword">function</span> <span class="token function">remove_menus</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><br />
+                                  <span class="token comment">// get current login user's role</span><br />
+                                  <span class="token variable">$roles</span> <span class="token operator">=</span> <span class="token function">wp_get_current_user</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-&gt;</span><span class="token property">roles</span><span class="token punctuation">;</span><br />
+                                  <br />
+                                  <span class="token comment">// test role</span><br />
+                                  <span class="token keyword">if</span><span class="token punctuation">(</span> <span class="token operator">!</span><span class="token function">in_array</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'editor'</span><span class="token punctuation">,</span><span class="token variable">$roles</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span><br />
+                                  <span class="token keyword">return</span><span class="token punctuation">;</span><br />
+                                  <span class="token punctuation">}</span><br />
+                                  <br />
+                                  <span class="token comment">//remove menu from site backend.</span><br />
+                                  <span class="token function">remove_menu_page</span><span class="token punctuation">(</span> <span class="token string single-quoted-string">'index.php'</span> <span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//Dashboard</span><br />
+                                  <span class="token function">remove_menu_page</span><span class="token punctuation">(</span> <span class="token string single-quoted-string">'edit.php'</span> <span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//Posts</span><br />
+                                  <span class="token function">remove_menu_page</span><span class="token punctuation">(</span> <span class="token string single-quoted-string">'upload.php'</span> <span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//Media</span><br />
+                                  <span class="token function">remove_menu_page</span><span class="token punctuation">(</span> <span class="token string single-quoted-string">'edit-comments.php'</span> <span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//Comments</span><br />
+                                  <span class="token function">remove_menu_page</span><span class="token punctuation">(</span> <span class="token string single-quoted-string">'themes.php'</span> <span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//Appearance</span><br />
+                                  <span class="token function">remove_menu_page</span><span class="token punctuation">(</span> <span class="token string single-quoted-string">'plugins.php'</span> <span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//Plugins</span><br />
+                                  <span class="token comment">// remove_menu_page( 'profile.php' ); //profile</span><br />
+                                  <span class="token comment">// remove_menu_page( 'users.php' ); //Users</span><br />
+                                  <span class="token function">remove_menu_page</span><span class="token punctuation">(</span> <span class="token string single-quoted-string">'tools.php'</span> <span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//Tools</span><br />
+                                  <span class="token function">remove_menu_page</span><span class="token punctuation">(</span> <span class="token string single-quoted-string">'options-general.php'</span> <span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//Settings</span><br />
+                                  <span class="token function">remove_menu_page</span><span class="token punctuation">(</span> <span class="token string single-quoted-string">'edit.php?post_type=page'</span> <span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//Pages</span><br />
+                                  <span class="token comment">// remove_menu_page('edit.php?post_type=testimonial'); // Custom post type 1</span><br />
+                                  <span class="token comment">// remove_menu_page('edit.php?post_type=homeslider'); // Custom post type 2</span><br />
+                                  <br />
+                                  <span class="token function">remove_menu_page</span><span class="token punctuation">(</span> <span class="token string single-quoted-string">'WPML'</span> <span class="token punctuation">)</span><span class="token punctuation">;</span><br />
+                                  <span class="token function">remove_menu_page</span><span class="token punctuation">(</span> <span class="token string single-quoted-string">'Traductions'</span> <span class="token punctuation">)</span><span class="token punctuation">;</span><br />
+                                  <span class="token function">remove_menu_page</span><span class="token punctuation">(</span> <span class="token string single-quoted-string">'wpml_manage_languages'</span> <span class="token punctuation">)</span><span class="token punctuation">;</span><br />
+                                  <span class="token function">remove_menu_page</span><span class="token punctuation">(</span> <span class="token string single-quoted-string">'sitepress-multilingual-cms/menu/languages.php'</span> <span class="token punctuation">)</span><span class="token punctuation">;</span><br />
+                                  <span class="token function">remove_menu_page</span><span class="token punctuation">(</span> <span class="token string single-quoted-string">'admin.php?page=wpml-translation-management/menu/translations-queue.php'</span> <span class="token punctuation">)</span><span class="token punctuation">;</span><br />
+                                  <span class="token function">remove_menu_page</span><span class="token punctuation">(</span> <span class="token string single-quoted-string">'admin.php'</span> <span class="token punctuation">)</span><span class="token punctuation">;</span><br />
+                                  <span class="token comment">// remove_menu_page( '#toplevel_page_wpml-translation-management-menu-translations-queue' );</span><br />
+                                  <br />
+                                  <span class="token comment">// ajout lien vers page d'accueil</span><br />
+                                  <span class="token function">add_menu_page</span><span class="token punctuation">(</span> <span class="token string single-quoted-string">'linked_url'</span><span class="token punctuation">,</span> <span class="token string single-quoted-string">'Page d\'accueil'</span><span class="token punctuation">,</span> <span class="token string single-quoted-string">'read'</span><span class="token punctuation">,</span> <span class="token string single-quoted-string">'/post.php?post=5&amp;action=edit'</span><span class="token punctuation">,</span> <span class="token string single-quoted-string">''</span><span class="token punctuation">,</span> <span class="token string single-quoted-string">'dashicons-admin-home'</span><span class="token punctuation">,</span> <span class="token number">0</span> <span class="token punctuation">)</span><span class="token punctuation">;</span><br />
+                                  <br />
+                                  <span class="token punctuation">}</span><br />
+                                  <span class="token function">add_action</span><span class="token punctuation">(</span> <span class="token string single-quoted-string">'admin_menu'</span><span class="token punctuation">,</span> <span class="token string single-quoted-string">'remove_menus'</span> <span class="token punctuation">,</span> <span class="token number">100</span> <span class="token punctuation">)</span><br />
+                </code>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr class="m-0" />
+        <!-- Education-->
+        <section class="resume-section" id="etape5">
+            <div class="resume-section-content">
+                <h2 class="mb-5">
+                    <span class="text-primary">Étape 5:</span> Ajouter la feuille de style admin dans le thème
+                </h2>
+                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="flex-grow-1">
+
+
+                        <div style="background: #f5f2f0; padding: 1em; margin: 0.5em 0">
+                            <code>
+                                <span class="token comment">// pour pouvoir styliser admin (et masquer éléments)</span><br />
+                                <span class="token comment">// custom admin style sheet</span><br />
+                                <span class="token keyword">function</span> <span class="token function">my_admin_head</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><br />
+                                  <span class="token keyword">echo</span> <span class="token string single-quoted-string">'&lt;link href="'</span><span class="token operator">.</span><span class="token function">get_stylesheet_directory_uri</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">.</span><span class="token string single-quoted-string">'/css/wp-admin.css" rel="stylesheet" type="text/css"&gt;'</span><span class="token punctuation">;</span><br />
+                                <span class="token punctuation">}</span><br />
+                                <span class="token function">add_action</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'admin_head'</span><span class="token punctuation">,</span> <span class="token string single-quoted-string">'my_admin_head'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br />
+                </code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr class="m-0" />
+        <!-- Education-->
+        <section class="resume-section" id="etape6">
+            <div class="resume-section-content">
+                <h2 class="mb-5">
+                    <span class="text-primary">Étape 6:</span> Ajouter la classe du rôle ou id utilisateur dans le body du backend
+                </h2>
+                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="flex-grow-1">
+
+
+                        <div style="background: #f5f2f0; padding: 1em; margin: 0.5em 0">
+                            <code>
+                                <span class="token doc-comment comment">/**<br />
+                                    * Add User Role Class to Body<br />
+                                    * Referenced code from http://www.studiok40.com/<br />
+                                    */</span><br />
+                                   <span class="token comment">//https://lakewood.media/add-user-role-id-body-class-wordpress/</span><br />
+                                   <span class="token keyword">function</span> <span class="token function">print_user_classes</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><br />
+                                     <span class="token keyword">if</span> <span class="token punctuation">(</span> <span class="token function">is_user_logged_in</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">)</span> <span class="token punctuation">{</span><br />
+                                         <span class="token function">add_filter</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'body_class'</span><span class="token punctuation">,</span><span class="token string single-quoted-string">'class_to_body'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br />
+                                         <span class="token function">add_filter</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'admin_body_class'</span><span class="token punctuation">,</span> <span class="token string single-quoted-string">'class_to_body_admin'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br />
+                                     <span class="token punctuation">}</span><br />
+                                   <span class="token punctuation">}</span><br />
+                                   <span class="token function">add_action</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'init'</span><span class="token punctuation">,</span> <span class="token string single-quoted-string">'print_user_classes'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br />
+                                   <br />
+                                   <span class="token comment">// Add user role class to front-end body tag</span><br />
+                                    <span class="token keyword">function</span> <span class="token function">class_to_body</span><span class="token punctuation">(</span><span class="token variable">$classes</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><br />
+                                     <span class="token keyword">global</span> <span class="token variable">$current_user</span><span class="token punctuation">;</span><br />
+                                     <span class="token variable">$user_role</span> <span class="token operator">=</span> <span class="token function">array_shift</span><span class="token punctuation">(</span><span class="token variable">$current_user</span><span class="token operator">-&gt;</span><span class="token property">roles</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br />
+                                     <span class="token variable">$classes</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token variable">$user_role</span><span class="token operator">.</span><span class="token string single-quoted-string">' '</span><span class="token punctuation">;</span><br />
+                                     <span class="token keyword">return</span> <span class="token variable">$classes</span><span class="token punctuation">;</span><br />
+                                    <span class="token punctuation">}</span><br />
+                                    <br />
+                                   <span class="token comment">/// Add user role class and user id to front-end body tag</span><br />
+                                   <br />
+                                   <span class="token comment">// add 'class-name' to the $classes array</span><br />
+                                   <span class="token keyword">function</span> <span class="token function">class_to_body_admin</span><span class="token punctuation">(</span><span class="token variable">$classes</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><br />
+                                     <span class="token keyword">global</span> <span class="token variable">$current_user</span><span class="token punctuation">;</span><br />
+                                     <span class="token variable">$user_role</span> <span class="token operator">=</span> <span class="token function">array_shift</span><span class="token punctuation">(</span><span class="token variable">$current_user</span><span class="token operator">-&gt;</span><span class="token property">roles</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br />
+                                     <span class="token comment">/* Adds the user id to the admin body class array */</span><br />
+                                     <span class="token variable">$user_ID</span> <span class="token operator">=</span> <span class="token variable">$current_user</span><span class="token operator">-&gt;</span><span class="token constant">ID</span><span class="token punctuation">;</span><br />
+                                     <span class="token variable">$classes</span> <span class="token operator">=</span> <span class="token variable">$user_role</span><span class="token operator">.</span><span class="token string single-quoted-string">' '</span><span class="token operator">.</span><span class="token string single-quoted-string">'user-id-'</span><span class="token operator">.</span><span class="token variable">$user_ID</span> <span class="token punctuation">;</span><br />
+                                     <span class="token keyword">return</span> <span class="token variable">$classes</span><span class="token punctuation">;</span><br />
+                                     <span class="token keyword">return</span> <span class="token string single-quoted-string">'user-id-'</span><span class="token operator">.</span><span class="token variable">$user_ID</span><span class="token punctuation">;</span><br />
+                                   <span class="token punctuation">}</span><br />
+                </code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr class="m-0" />
+        <!-- Interests-->
+        <section class="resume-section" id="etape13">
+            <div class="resume-section-content">
+                <h2 class="mb-5"><a class="nav-link js-scroll-trigger" href="https://montage203.github.io/Tutoriels">Autres tutoriels</a></h2>
+
+            </div>
+        </section>
+
+    </div>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Third party plugin JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>
